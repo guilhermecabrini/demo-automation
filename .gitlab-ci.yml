@@ -21,3 +21,15 @@ building:
   stage: build
   script:
     - mvn package
+
+deploy:
+  stage: deploy
+  script:
+    - git remote add heroku https://cabrini:$HEROKU_KEY@git.heroku.com/demon-automation.git
+    - git push keroku master
+  environment:
+    name: production
+    url: https://demon-automation.herokuapp.com
+  only:
+    - master
+  when: manual
