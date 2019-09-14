@@ -1,5 +1,8 @@
 # Getting Started
 
+[![pipeline status](https://gitlab.com/guilhermecabrini/demo-automation/badges/master/pipeline.svg)](https://gitlab.com/guilhermecabrini/demo-automation/commits/master)
+[![coverage report](https://gitlab.com/guilhermecabrini/demo-automation/badges/master/coverage.svg)](https://gitlab.com/guilhermecabrini/demo-automation/commits/master)
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 

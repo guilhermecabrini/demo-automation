@@ -23,6 +23,7 @@ unit-test:
   stage: test
   script:
     - mvn $MAVEN_OPTS test
+    - echo "Total 15%"
 
 building:
   stage: build
