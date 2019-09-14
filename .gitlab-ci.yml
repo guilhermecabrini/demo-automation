@@ -17,25 +17,25 @@ stages:
 validate:
   stage: validate
   script:
-    - mvn validate
+    - mvn $MAVEN_OPTS validate
 
 unit-test:
   stage: test
   script:
-    - mvn test
+    - mvn $MAVEN_OPTS test
 
 building:
   stage: build
   script:
-    - mvn package
+    - mvn $MAVEN_OPTS package -DskipTests
 
 deploy:
   stage: deploy
+  before_script:
+    - git checkout master
   script:
+    - git show-ref
     - git remote add heroku https://cabrini:$HEROKU_KEY@git.heroku.com/demon-automation.git
-    - git config user.name "Guilherme Cabrini da Silva"
-    - git config user.email "$GITLAB_USER_EMAIL"
-    - git commit -m "Heroku Deploy"
     - git push heroku HEAD:master -f
   environment:
     name: production
