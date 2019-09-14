@@ -35,7 +35,8 @@ deploy:
     - git remote add heroku https://cabrini:$HEROKU_KEY@git.heroku.com/demon-automation.git
     - git config user.name "Guilherme Cabrini da Silva"
     - git config user.email "$GITLAB_USER_EMAIL"
-    - git push heroku --all
+    - git commit -m "Heroku Deploy"
+    - git push heroku HEAD:master -f
   environment:
     name: production
     url: https://demon-automation.herokuapp.com
