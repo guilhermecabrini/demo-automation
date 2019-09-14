@@ -42,4 +42,3 @@ deploy:
     url: https://demon-automation.herokuapp.com
   only:
     - master
-  when: manual
