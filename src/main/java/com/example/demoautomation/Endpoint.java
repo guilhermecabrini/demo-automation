@@ -9,6 +9,6 @@ public class Endpoint {
 
     @GetMapping("/")
     public ResponseEntity<?> demon() {
-        return ResponseEntity.ok("SUCESSO!");
+        return ResponseEntity.ok("SUCESSO");
     }
 }
